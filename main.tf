@@ -45,7 +45,7 @@ resource "aws_instance" "mylinux2021" {
   ami               = var.ami_id
   instance_type     = var.instance_type
   availability_zone = "${var.aws_region}a"
-  key_name = sshpubkey
+  key_name = var.sshpubkey
   security_groups = ["sgsshpermit"]
 
   tags = {
