@@ -37,7 +37,7 @@ resource "aws_security_group" "sginout" {
 # Key pair
 resource "aws_key_pair" "tfm_key" {
   key_name = "ssh_key"
-  public_key = file("/Users/kader/.ssh/mylab_tfm.pub")
+  public_key = var.sshpubkey
 }
 
 #Create aws instance
